@@ -1,3 +1,5 @@
-.container {
-    width: 2;
-}
+.title h1 {
+    font-size: 50px;
+    text-align: center;
+    color: grey;
+}   
