@@ -1,5 +1,12 @@
-.title h1 {
-    font-size: 50px;
+.menu-container {
+    height: 100%;   
+    width: 230px;
+    border: 1.8px solid black;
+    position: fixed;
+}
+
+.menu-container h2 {
     text-align: center;
-    color: grey;
-}   
+    font-family: Georgia;
+    font-size: 100px;
+}
