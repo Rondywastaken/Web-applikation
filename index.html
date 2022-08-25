@@ -14,15 +14,25 @@
         <h2>Login</h2>
 
         <div class="brugernavn-container">
-            <input text="Brugernavn"/>
+            <input type="text" placeholder="Brugernavn"/>
         </div>
 
         <div class="adgangskode-container">
-            <input text="Adgangskode"/>
+            <input type="text" placeholder="Adgangskode"/>
+        </div>
+        
+        <div class="institution-container">
+            <select name="institution" aria-placeholder="institution">
+                <option value="" disabled selected>Vælg din institution</option>
+                <option value="glostrup hospital">Glostrup Hospital</option>
+                <option value="rigshospitalet">Rigshospitalet</option>
+                <option value="herlev hospital">Herlev Hospital</option>
+            </select>
         </div>
 
     </div>
 
+    <img src="img/Skærmbillede_2022-08-23_122933-removebg-preview.png" alt="logo">
 
     <script src="src/script.js"></script>
 </body>

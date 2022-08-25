@@ -1,3 +1,16 @@
+:root {
+    --mainColor: #185A9C;
+    --secondColor: #50B6D0;
+    --thirdColor: #4A94B8;
+    --white: #FFFFFF; 
+    --test: linear-gradient(to left,#4A94B8, #50B6D0, #185A9C)  
+}
+
+body {
+    background-image: var(--test);
+}
+
+
 .login-container {
     width: 600px;
     height: 300px;
@@ -11,6 +24,7 @@
     max-width: 100%;
     max-height: 100%;
     overflow: auto;
+    border-radius : 30px;
 }
 
 .login-container h2 {
@@ -26,9 +40,35 @@
     border-radius: 15px;
     text-align: left;
     margin: auto;
+    display: flex;
 
 }
 
 .adgangskode-container input {
     border: 2px solid black;
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: left;
+    margin: auto;
+    display: flex;
+}
+
+.institution-container select {
+    border: 2px solid black;
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    display: flex;
+}
+
+img {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
 }
