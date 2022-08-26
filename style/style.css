@@ -14,7 +14,6 @@ body {
 .login-container {
     width: 600px;
     height: 300px;
-    border: 2px solid black;
     position: absolute;
     left: 0;
     right: 0;
@@ -34,37 +33,69 @@ body {
 }
 
 .brugernavn-container input {
-    border: 2px solid black;
+    border: none;
     width: 300px;
     height: 30px;
-    border-radius: 15px;
+    border-radius: 25px;
     text-align: left;
     margin: auto;
     display: flex;
+    box-sizing: content-box;
+    padding: 1px;
+    background-color: var(--white);
+}
 
+#brugernavnInput:focus {
+    border: none;
 }
 
 .adgangskode-container input {
-    border: 2px solid black;
+    border: none;
     width: 300px;
     height: 30px;
-    border-radius: 15px;
-    text-align: left;
-    margin: auto;
-    display: flex;
-}
-
-.institution-container select {
-    border: 2px solid black;
-    width: 300px;
-    height: 30px;
-    border-radius: 15px;
+    border-radius: 25px;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 8px;
+    margin-top: 20px;
     display: flex;
+    box-sizing: content-box;
+    padding: 1px;
 }
+
+.institution-container select {
+    border: none;
+    width: 300px;
+    height: 30px;
+    border-radius: 25px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: flex;
+    box-sizing: content-box;
+    padding: 1px;
+}
+
+.login-button button {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 25px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .loginText {
+    background: var(--test);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
 
 img {
     margin: auto;
