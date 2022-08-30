@@ -3,56 +3,73 @@
     --secondColor: #50B6D0;
     --thirdColor: #4A94B8;
     --white: #FFFFFF; 
-    --test: linear-gradient(to left,#4A94B8, #50B6D0, #185A9C)  
+    --test: linear-gradient(to left,#4A94B8, #50B6D0, #185A9C);
+
+    --boxHeight: 6vh;
+    --boxWidth: 30%;
+    --boxMinHeight: 30px;
+    --boxMinWidth: 200px;
+    --boxFontSize: 80%;
 }
 
 body {
     background-image: var(--test);
 }
 
+img {
+    margin: auto;
+    display: flex;
+    justify-content:flex-start;
+    height: 15vh;
+}
 
 .login-container {
-    width: 600px;
-    height: 300px;
+    height: 80%;
+    width: 95%;
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
+    top: 15vh;
     bottom: 0;
     margin: auto;
-    max-width: 100%;
-    max-height: 100%;
+    min-width: 0;
+    min-height: 0;
     overflow: auto;
-    border-radius : 30px;
+    /*border: 2px solid black;*/
 }
 
 .login-container h2 {
     text-align: center;
-    font-family: Georgia;
-    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 150%;
 }
 
 .brugernavn-container input {
     border: none;
-    width: 300px;
-    height: 30px;
+    height: var(--boxHeight);
+    width: var(--boxWidth);
+    min-height: var(--boxMinHeight);
+    min-width: var(--boxMinWidth);
     border-radius: 25px;
     text-align: left;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
     display: flex;
     box-sizing: content-box;
     padding: 1px;
     background-color: var(--white);
-}
 
-#brugernavnInput:focus {
-    border: none;
+    text-indent: 10px;
+    font-size: var(--boxFontSize);
 }
 
 .adgangskode-container input {
     border: none;
-    width: 300px;
-    height: 30px;
+    height: var(--boxHeight);
+    width: var(--boxWidth);
+    min-height: var(--boxMinHeight);
+    min-width: var(--boxMinWidth);
     border-radius: 25px;
     text-align: left;
     margin-left: auto;
@@ -61,12 +78,17 @@ body {
     display: flex;
     box-sizing: content-box;
     padding: 1px;
+
+    text-indent: 10px;
+    font-size: var(--boxFontSize);    
 }
 
 .institution-container select {
     border: none;
-    width: 300px;
-    height: 30px;
+    height: var(--boxHeight);
+    width: var(--boxWidth);
+    min-height: var(--boxMinHeight);
+    min-width: var(--boxMinWidth);
     border-radius: 25px;
     text-align: left;
     margin-left: auto;
@@ -75,18 +97,23 @@ body {
     display: flex;
     box-sizing: content-box;
     padding: 1px;
+
+    text-indent: 10px;
+    font-size: var(--boxFontSize);    
 }
 
 .login-button button {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 25px;
     border: none;
-    width: 100px;
-    height: 40px;
-    font-size: 30px;
+    height: var(--boxHeight);
+    width: 10%;
+    min-height: var(--boxMinHeight);
+    min-width: var(--boxMinWidth);
+    font-size: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -96,10 +123,3 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 } */
-
-img {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-
-}
