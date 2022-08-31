@@ -16,8 +16,8 @@
 
 body {
     /*background-image: var(--test);*/
-    animation-name: baggrundsFarve;
-    animation-duration: 4s;
+    animation: baggrundsFarve 4s infinite;
+
 }
 
 img {
