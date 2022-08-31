@@ -47,7 +47,7 @@ img {
 
 }
 
-.login-container h2 {
+.login-container h1 {
     text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 150%;
@@ -97,7 +97,7 @@ img {
     font-size: var(--boxFontSize);    
 }
 
-.login-button button {
+.login-button {
     display: flex;
     background-color: rgb(68, 196, 255);
     color: white;
@@ -128,8 +128,57 @@ img {
 }
 
 
-/* .loginText {
-    background: var(--test);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
+/* Registrer side*/
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 400px;
+    width: 250px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.register-container h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.register-input-container input {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: left;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-style: none none solid none;
+    border-color: rgb(175, 175, 175);
+    border-width: 1.5px;
+    height: var(--boxHeight);
+    width: var(--boxWidth);
+    min-height: var(--boxMinHeight);
+    min-width: var(--boxMinWidth);
+    background-color: white;
+}
+
+.register-button input {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: right;
+
+    background-color: rgb(68, 196, 255);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-radius: 25px;
+    border-style: none;
+    
+    height: var(--boxHeight);
+    width: var(--boxWidth);
+    min-height: var(--boxMinHeight);
+    min-width: var(--boxMinWidth);
+}
