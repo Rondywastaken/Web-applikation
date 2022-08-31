@@ -4,47 +4,39 @@
     --thirdColor: #4A94B8;
     --white: #FFFFFF; 
     --test: linear-gradient(to left,#4A94B8, #50B6D0, #185A9C);
-
-    --boxHeight: 6vh;
-    --boxWidth: 30%;
-    --boxMinHeight: 30px;
-    --boxMinWidth: 200px;
-    --boxFontSize: 80%;
-
-    --imgSize: 18vh;
 }
 
+@keyframes baggrundsFarve {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+
 body {
-    background-image: var(--test);
+    /*background-image: var(--test);*/
+    animation-name: baggrundsFarve;
+    animation-duration: 4s;
 }
 
 img {
-    margin: auto;
-    display: flex;
-    justify-content:flex-start;
-    height: var(--imgSize);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
 }
 
 .login-container {
     display: flex;
     flex-direction: column;
-    height: 70%;
-    width: 25%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 18vh;
-    bottom: 0;
+    background-color: white;
+    height: 500px;
+    width: 270px;
     margin: auto;
-    overflow: auto;
-    background-color: var(--white);
-    border-radius: 10px;
-}
-
-.login-container div {
-    justify-content: space-between;
-    margin-top: 20px;
-
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 80px;
 }
 
 .login-container h1 {
@@ -53,74 +45,58 @@ img {
     font-size: 150%;
 }
 
-.brugernavn-container input {
-    border-style: none none solid none;
-    border-color: rgb(175, 175, 175);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-width: 1.5px;
-
-    height: var(--boxHeight);
-    width: var(--boxWidth);
-    min-height: var(--boxMinHeight);
-    min-width: var(--boxMinWidth);
-    text-align: left;
+.login-input-container input {
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    justify-items: center;
-    display: flex;
+    margin-top: 10px;
+    text-align: left;
 
-    background-color: var(--white);
-
-    text-indent: 10px;
-    font-size: var(--boxFontSize);
-}
-
-.adgangskode-container input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-style: none none solid none;
     border-color: rgb(175, 175, 175);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-width: 1.5px;
+    height: 40px;
+    width: 180px;
+    background-color: white;
 
-    height: var(--boxHeight);
-    width: var(--boxWidth);
-    min-height: var(--boxMinHeight);
-    min-width: var(--boxMinWidth);
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    justify-items: center;
-    display: flex;
-
-    background-color: var(--white);
-
-    text-indent: 10px;
-    font-size: var(--boxFontSize);    
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.login-input-container input:hover {
+    background-color: rgb(238, 238, 238);
 }
 
-.login-button {
-    display: flex;
+.login-button input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+
     background-color: rgb(68, 196, 255);
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10vh ;
-    border: none;
-    height: var(--boxHeight);
-    width: 10%;
-    min-height: var(--boxMinHeight);
-    min-width: var(--boxMinWidth);
-    font-size: 100%;
-    align-items: center;
-    justify-content: center;
+    border-radius: 25px;
+    border-style: none;
+    font-size: 15px;
+    
+    height: 40px;
+    width: 180px;
+
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.login-button input:hover  {
+    background-color: rgb(0, 153, 224);
+    color: rgb(255, 255, 255);
 }
 
-.registrer-link a {
-    display: flex;
+.registrer-link {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
 
     font-size: 100%;
     align-items: center;
@@ -128,21 +104,24 @@ img {
 }
 
 
-/* Registrer side*/
+/*---------------- Registrer side ----------------*/
 
 .register-container {
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 400px;
-    width: 250px;
+    height: 500px;
+    width: 270px;
     margin: auto;
-    border-radius: 25px;
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 80px;
 }
 
 .register-container h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 150%;
 }
 
 .register-input-container input {
@@ -156,19 +135,23 @@ img {
     border-style: none none solid none;
     border-color: rgb(175, 175, 175);
     border-width: 1.5px;
-    height: var(--boxHeight);
-    width: var(--boxWidth);
-    min-height: var(--boxMinHeight);
-    min-width: var(--boxMinWidth);
+    height: 40px;
+    width: 180px;
     background-color: white;
+
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.register-input-container input:hover {
+    background-color: rgb(238, 238, 238);
 }
 
 .register-button input {
-    display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    text-align: right;
+    margin-top: 30px;
+    text-align: center;
 
     background-color: rgb(68, 196, 255);
     color: white;
@@ -176,9 +159,27 @@ img {
     font-weight: bold;
     border-radius: 25px;
     border-style: none;
+    font-size: 15px;
     
-    height: var(--boxHeight);
-    width: var(--boxWidth);
-    min-height: var(--boxMinHeight);
-    min-width: var(--boxMinWidth);
+    height: 40px;
+    width: 180px;
+
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.register-button input:hover  {
+    background-color: rgb(0, 153, 224);
+    color: rgb(255, 255, 255);
+}
+
+.index-link {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+
+    font-size: 100%;
+    align-items: center;
+    justify-content: center;
 }
