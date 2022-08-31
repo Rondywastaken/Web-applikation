@@ -3,21 +3,14 @@
     --secondColor: #50B6D0;
     --thirdColor: #4A94B8;
     --white: #FFFFFF; 
-    --test: linear-gradient(to left,#4A94B8, #50B6D0, #185A9C);
+    --test: linear-gradient(to left,#185A9C, #50B6D0, #185A9C);
 }
 
-@keyframes baggrundsFarve {
-    0%   {background-color: rgb(0, 132, 255);}
-    50%  {background-color: rgb(0, 110, 255);}
-    75%  {background-color: rgb(0, 60, 255);}
-    100% {background-color: rgb(0, 38, 255);}
-  }
+
 
 
 body {
-    /*background-image: var(--test);*/
-    animation: baggrundsFarve 4s infinite alternate;
-
+    background-image: var(--test);
 }
 
 img {
