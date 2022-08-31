@@ -7,16 +7,16 @@
 }
 
 @keyframes baggrundsFarve {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
+    0%   {background-color: rgb(0, 132, 255);}
+    50%  {background-color: rgb(0, 110, 255);}
+    75%  {background-color: rgb(0, 60, 255);}
+    100% {background-color: rgb(0, 38, 255);}
   }
 
 
 body {
     /*background-image: var(--test);*/
-    animation: baggrundsFarve 4s infinite;
+    animation: baggrundsFarve 4s infinite alternate;
 
 }
 
