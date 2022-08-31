@@ -81,33 +81,13 @@ img {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     box-sizing: content-box;
     padding: 1px;
 
     text-indent: 10px;
     font-size: var(--boxFontSize);    
-}
-
-.institution-container select {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-style: solid;
-    height: var(--boxHeight);
-    width: var(--boxWidth);
-    min-height: var(--boxMinHeight);
-    min-width: var(--boxMinWidth);
-    border-radius: 2vh;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    display: flex;
-    box-sizing: content-box;
-    padding: 1px;
-
-    text-indent: 10px;
-    font-size: var(--boxFontSize);       
 }
 
 .login-button button {
@@ -117,7 +97,7 @@ img {
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 10vh ;
     border: none;
     height: var(--boxHeight);
@@ -128,6 +108,20 @@ img {
     align-items: center;
     justify-content: center;
 }
+
+.registrer-link a {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40%;
+    margin-bottom: auto;
+
+    font-size: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* .loginText {
     background: var(--test);
