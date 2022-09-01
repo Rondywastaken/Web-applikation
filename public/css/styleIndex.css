@@ -1,0 +1,55 @@
+:root {
+  --mainColor: #185a9c;
+  --secondColor: #50b6d0;
+  --thirdColor: #4a94b8;
+  --white: #ffffff;
+  --test: linear-gradient(to left, #185a9c, #50b6d0, #185a9c);
+}
+body {
+  background-image: var(--test);
+}
+
+.sidebar-container {
+  flex-direction: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 300px;
+}
+
+.grupper-container {
+  display: flex;
+  margin: left;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.grupper-container button {
+  margin-top: 10px;
+  background-color: #185a9c;
+  width: 100px;
+  height: 100px;
+  border-style: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.menu-searchbar-container {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  height: 20px;
+  border-style: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#menu {
+  height: ;
+  width: ;
+}
+
+#searchbar {
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+}
