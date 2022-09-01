@@ -56,7 +56,10 @@ img {
 .login-input-container input:hover {
     background-color: rgb(238, 238, 238);
 }
-
+.login-input-container p {
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
 button {
     margin-left: auto;
     margin-right: auto;

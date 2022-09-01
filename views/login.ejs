@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="/css/styleLogin.css" />
   </head>
   <body>
-    <p style="color: #da012d">
-      <% if (messages.error) { %> <%= messages.error %> <% } %>
-    </p>
 
     <div class="login-container">
       <img src="/logo.png" alt="logo.png" />
@@ -33,7 +30,11 @@
             placeholder="Adgangskode"
             required
           />
+          <p style="color: #da012d">
+            <% if (messages.error) { %> <%= messages.error %> <% } %>
+          </p>
         </div>
+        
 
         <button type="submit">Login</button>
 
