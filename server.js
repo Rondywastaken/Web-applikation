@@ -41,17 +41,17 @@ app.use(methodOverride("_method"));
 
 
 // hovedmenu 
-app.get("/", checkAuthenticated, (req, res) => {
-    res.render("index.ejs", { name: req.user.name });
+app.get("/", /*checkAuthenticated*/ (req, res) => {
+    res.render("index.ejs" /*{ name: req.user.name }*/);
 });
 
 
 // login
-app.get("/login", checkNotAuthenticated, (req, res) => {
+app.get("/login", /*checkNotAuthenticated*/ (req, res) => {
     res.render("login.ejs");
 });
 
-app.post("/login", checkNotAuthenticated, passport.authenticate("local", {
+app.post("/login", /*checkNotAuthenticated*/ passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/login",
     failureFlash: true

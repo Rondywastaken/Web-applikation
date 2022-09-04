@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hovedmenu</title>
     <link rel="stylesheet" href="/css/styleIndex.css">
+    
 </head>
 <body>
-    <h1>Hello <%=name%> </h1>
+    <!--<h1>Hello <!%=name%> </h1>
     <form action="/logout?_method=DELETE" method="POST">
         <button type="submit">Log Out</button>
-    </form>
+    </form> -->
 
     <div class="sidebar-container">
         <div class="menu-searchbar-container">
@@ -20,7 +21,7 @@
             
         </div>
         <div class="grupper-container">
-            <button type="submit" >Kirugi samtale</button>
+            <button id="tester" type="submit" >Kirugi samtale</button>
             <button type="submit" >Kirugi samtale</button>
             <button type="submit" >Kirugi samtale</button>
         </div>
@@ -28,5 +29,7 @@
     <div class="chat-container">
         
     </div>
+
+    <script src="/src/script.js"></script>
 </body>
 </html>
