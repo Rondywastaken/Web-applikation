@@ -6,20 +6,42 @@
   --test: linear-gradient(to left, #185a9c, #50b6d0, #185a9c);
 }
 body {
-  background-image: var(--test);
+  background-image: var(--white);
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
 }
 
 .sidebar-container {
   flex-direction: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  height: 100vh;
-  width: 300px;
+  background-color: var(--thirdColor);
+  height: 100.4vh;
+  width: 18%;
   /*box-shadow: 0px 10px 10px black;*/
   border-style: none solid none none;
   border-width: 1px;
   border-color: rgb(185, 185, 185);
+  margin-left: -0.4%;
+  margin-top: -0.4%;
+  overflow-y: scroll;
 }
+::-webkit-scrollbar {
+  width: 0.6vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondColor); 
+  border-radius: 10px;
+}
+
 
 .grupper-container {
   display: flex;
@@ -29,37 +51,39 @@ body {
   margin-top: 10px;
 }
 .grupper-container button {
-  background-color: #ffffff;
-  color: grey;
+  background-color: var(--thirdColor);
+  color: rgb(255, 255, 255);
   width: 100%;
-  height: 100px;
+  height: 8vh;
   border-style: none;
   text-align: center;
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 2px;
 
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   cursor: pointer;
 }
 .grupper-container button:hover {
-  background-color: #ebebeb;
-  color: grey;
+  background-color: #53a5ce;
+  color: rgb(255, 255, 255);
   width: 100%;
-  height: 100px;
+  height: 10vh;
   border-style: none;
   text-align: center;
+  border-radius: 10px;
 }
 
 .menu-searchbar-container {
   display: flex;
   flex-direction: row;
-  width: 100px;
-  height: 20px;
+  width: 100%;
+  height: 5vh;
   border-style: none;
   text-align: center;
   border-radius: 5px;
   margin-bottom: 20px;
+  background-color: #4181a1;
 }
 
 #menu {
@@ -73,12 +97,21 @@ body {
 
 #searchbar {
   height: 30px;
-  width: 200px;
+  width: 150%;
   border-radius: 5px;
   border-style: none;
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 5px rgb(173, 173, 173) inset;
-  margin: 5px;
+  margin-left: 10%;
+  margin-top: 5px;
   text-indent: 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-container {
+  margin-top: -0.5%;
+  width: 82%;
+  height: 100vh;
+  background-color: #ffffff;
+
 }
