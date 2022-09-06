@@ -5,12 +5,19 @@ if (process.env.NODE_ENV !== "production") {
 
 // Konstanter
 const express = require("express");
-const app = express();
+const io = require("socket.io")(3000);
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
+
+const app = express();
+
+// tjekker når en bruger er forbundet
+io.on("connection", socket => {
+    socket.emit("chat-message", "A user connected!");
+});
 
 // Tjekker for bruger eksistens
 const initializePassport = require("./passport-config");
@@ -107,4 +114,4 @@ function checkNotAuthenticated(req, res, next) {
 }
 
 // Port
-app.listen(3000);
+app.listen(5000);

@@ -1,9 +1,6 @@
-const btn = document.getElementById("tester");
+const socket = io("http://localhost:3000", { transports : ["websocket"] });
 
-btn.addEventListener("click", handler)
-
-function handler() {
-    console.log("hej");
-}
-
+socket.on("chat-message", data => {
+    console.log(data);
+});
 
