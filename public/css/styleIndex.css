@@ -22,8 +22,8 @@ body {
   border-style: none solid none none;
   border-width: 1px;
   border-color: rgb(185, 185, 185);
-  margin-left: -0.4%;
-  margin-top: -0.4%;
+  margin-left: -0.8%;
+  margin-top: -0.8%;
   overflow-y: scroll;
 }
 ::-webkit-scrollbar {
