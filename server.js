@@ -16,7 +16,9 @@ const app = express();
 
 // tjekker når en bruger er forbundet
 io.on("connection", socket => {
-    socket.emit("chat-message", "A user connected!");
+    socket.on("send-chat-message", message => {
+        socket.broadcast.emit("chat-message", message);
+    })
 });
 
 // Tjekker for bruger eksistens
