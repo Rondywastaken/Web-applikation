@@ -9,38 +9,16 @@
     <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script defer src="/src/script.js"></script>
 
+
 </head>
 <body>
-    <!--<h1>Hello <!%=name%> </h1>
+    <% var name2 = name  %> 
+    <h1 id="hello-text" data-name=<%= name %> >Hello <%=name2%> </h1>
     <form action="/logout?_method=DELETE" method="POST">
         <button type="submit">Log Out</button>
-    </form> -->
+    </form>
 
-    <div class="sidebar-container">
-        <div class="menu-searchbar-container">
-            <div><button type="submit" id="menu" /></div>
-            <div><input type="text" id="searchbar" placeholder="Søg" /></div>
-            
-        </div>
-        <div class="grupper-container">
-            <button id="tester" type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-            <button type="submit" >Kirugi samtale</button>
-        </div>
-      </div>
-
+    
       <div id="message-container">
         <form id="send-container">
             <input type="text" id="message-input">

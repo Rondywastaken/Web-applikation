@@ -13,16 +13,26 @@ const session = require("express-session");
 const methodOverride = require("method-override");
 
 const app = express();
+const users2 = {};
 
 // tjekker når en bruger er forbundet
 io.on("connection", socket => {
+    socket.on("new-user", getName => {
+        users2[socket.id] = getName;
+        socket.broadcast.emit("user-connected", getName);
+    });
     socket.on("send-chat-message", message => {
-        socket.broadcast.emit("chat-message", message);
-    })
+        socket.broadcast.emit("chat-message", { message: message, name: users2[socket.id] });
+    });
+    socket.on("disconnect", () => {
+        socket.broadcast.emit("user-disconnected", users2[socket.id]);
+        delete users2[socket.id];
+    });
 });
 
 // Tjekker for bruger eksistens
 const initializePassport = require("./passport-config");
+const { name } = require("ejs");
 initializePassport(
     passport, 
     email => users.find(user => user.email === email),
@@ -30,6 +40,7 @@ initializePassport(
 );
 
 const users = [];
+
 
 // Express app settings
 app.set("view-engine", "ejs");
@@ -51,7 +62,7 @@ app.use(methodOverride("_method"));
 
 // hovedmenu 
 app.get("/", /*checkAuthenticated*/ (req, res) => {
-    res.render("index.ejs" /*{ name: req.user.name }*/);
+    res.render("index.ejs", { name: req.user.name });
 });
 
 
@@ -68,12 +79,12 @@ app.post("/login", /*checkNotAuthenticated*/ passport.authenticate("local", {
 }))
 
 // Registering
-app.get("/register", checkNotAuthenticated, (req, res) => {
+app.get("/register", /*checkNotAuthenticated*/ (req, res) => {
     res.render("register.ejs");
 });
 
 // Gemmer på bruger og krypterer brugers adgangskode.
-app.post("/register", checkNotAuthenticated, async (req, res) => {
+app.post("/register", /*checkNotAuthenticated*/ async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         users.push({
@@ -87,6 +98,7 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
         res.redirect("/register");
     }
     console.log(users);
+    module.exports = users;
 });
 
 // log out
@@ -117,3 +129,5 @@ function checkNotAuthenticated(req, res, next) {
 
 // Port
 app.listen(5000);
+
+
