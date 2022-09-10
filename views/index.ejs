@@ -12,8 +12,7 @@
 
 </head>
 <body>
-    <% var name2 = name  %> 
-    <h1 id="hello-text" data-name=<%= name %> >Hello <%=name2%> </h1>
+    <h1 id="hello-text" data-name=<%= name %>></h1>
     <form action="/logout?_method=DELETE" method="POST">
         <button type="submit">Log Out</button>
     </form>
@@ -21,7 +20,7 @@
     
       <div id="message-container">
         <form id="send-container">
-            <input type="text" id="message-input">
+            <input type="text" id="message-input" placeholder="Skriv noget">
             <button type="submit" id="send-button">Send</button>
         </form>
       </div>

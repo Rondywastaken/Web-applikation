@@ -1,29 +1,47 @@
+:root {
+  --mainColor: #185A9C;
+  --secondColor: #50B6D0;
+  --thirdColor: #4A94B8;
+  --white: #FFFFFF; 
+  --test: linear-gradient(to left,#185A9C, #50B6D0, #185A9C);
+}
+
 body {
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
+  background-image: var(--test);
 }
 
 #message-container {
   width: 80%;
   max-width: 1200px;
+  border: black solid 2px;
+  border-radius: 10px;
 }
 
 #message-container div {
-  background-color: #CCC;
+  background-color: var(--secondColor);
   padding: 5px;
+  border: black solid 1px;
+  border-top: 0px;
+  border-width: 0px;
+  
 }
 
 #message-container div:nth-child(2n) {
-  background-color: #FFF;
+  background-color: var(--thirdColor);
+  border: black solid 1px;
+  border-top: 0px;
+  border-width: 0px;
 }
 
 #send-container {
   position: fixed;
   padding-bottom: 30px;
   bottom: 0;
-  background-color: white;
+  background-color: var(--test);
   max-width: 1200px;
   width: 80%;
   display: flex;

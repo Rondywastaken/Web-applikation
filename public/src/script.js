@@ -5,7 +5,7 @@ const messageInput = document.getElementById("message-input");
 
 var getName = document.getElementById("hello-text").dataset.name;
 
-appendMessage("Du tilsluttede dig samtalen!");
+appendMessage("Du tilsluttede dig samtalen");
 socket.emit("new-user", getName);
 
 socket.on("chat-message", data => {
